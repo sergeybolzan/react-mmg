@@ -1,0 +1,32 @@
+.start-game {
+  background: url(./images/start-game-bg.png) no-repeat right 20px bottom;
+  background-color: #b1dee8; }
+  .start-game .wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 50px; }
+  .start-game .user-settings {
+    text-align: center; }
+    .start-game .user-settings h3 {
+      margin-top: 20px; }
+    .start-game .user-settings h3.helper {
+      display: inline-block;
+      position: relative;
+      margin-top: 0; }
+      .start-game .user-settings h3.helper::before {
+        content: '';
+        background-image: url(./images/start-game-baggage.png);
+        width: 150px;
+        height: 85px;
+        display: inline-block;
+        position: absolute;
+        top: 45px;
+        left: -230px; }
+  .start-game .start-button-wrapper {
+    text-align: center; }
+    .start-game .start-button-wrapper button {
+      background: #0070ce;
+      padding: 10px 50px;
+      margin: 20px auto; }
+      .start-game .start-button-wrapper button:hover {
+        background-color: #028cff; }

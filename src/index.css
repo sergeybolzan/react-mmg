@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "BuxtonSketch";
+  font-weight: normal;
+  font-style: normal;
+  src: url("./utils/fonts/BuxtonSketch-Regular/BuxtonSketch-Regular.eot");
+  src: url("./utils/fonts/BuxtonSketch-Regular/BuxtonSketch-Regular.eot?#iefix") format("embedded-opentype"), url("./utils/fonts/BuxtonSketch-Regular/BuxtonSketch-Regular.woff") format("woff"), url("./utils/fonts/BuxtonSketch-Regular/BuxtonSketch-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("./utils/fonts/OpenSans-Regular/OpenSans-Regular.eot");
+  src: url("./utils/fonts/OpenSans-Regular/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("./utils/fonts/OpenSans-Regular/OpenSans-Regular.woff") format("woff"), url("./utils/fonts/OpenSans-Regular/OpenSans-Regular.ttf") format("truetype"); }
+
+* {
+  box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%; }
+
+body {
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0;
+  font-family: "OpenSans", "Arial", sans-serif;
+  background-color: #b1dee8; }
+
+h3 {
+  text-align: center;
+  font-family: "BuxtonSketch", sans-serif;
+  font-size: 32px;
+  color: #b54826;
+  margin: 0;
+  font-weight: 400; }
+
+p, ol {
+  font-family: "BuxtonSketch", sans-serif;
+  font-size: 22px;
+  color: #3c251c;
+  margin: auto; }
+
+input, button, select {
+  font-family: "OpenSans", "Arial", sans-serif; }
+
+button {
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  background: #1bd675;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-radius: 10px;
+  outline: none; }
+
+.modal {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }

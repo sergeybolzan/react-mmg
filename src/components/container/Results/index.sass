@@ -1,0 +1,40 @@
+.end-game
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  color: #454646
+  background: url(./images/end-game-bg.jpg) no-repeat center center / cover
+  min-height: 100%
+  h2
+    font-family: "BuxtonSketch", sans-serif
+    font-size: 56px
+    font-weight: 400
+    margin: auto
+  .result-score
+    font-size: 30px
+  h4
+    font-size: 26px
+    margin: 20px auto
+  .results-table
+    height: 400px
+    overflow: auto
+    border: 2px solid #fff
+  table
+    width: 100%
+    border-spacing: 0
+    border-radius: 0 0 10px 10px
+    td
+      border-top: 2px solid #fff
+    th, td
+      border-left: 2px solid #fff
+      &:first-child
+        border-left: none
+      &:nth-last-child(1)
+        width: 100px
+  button
+    margin: 20px auto
+    background: #fff
+    color: #000
+    &:hover
+      background-color: darken(#fff, 10%)

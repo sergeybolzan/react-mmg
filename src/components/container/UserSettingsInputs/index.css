@@ -1,0 +1,8 @@
+.user-settings-inputs input {
+  width: 250px;
+  display: block;
+  margin: 5px auto;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 7px;
+  font-size: 16px; }

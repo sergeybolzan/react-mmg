@@ -1,0 +1,7 @@
+.difficulty-selection select {
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  margin: 10px 0;
+  padding-left: 5px;
+  width: 150px; }

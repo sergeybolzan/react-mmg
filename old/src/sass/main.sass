@@ -1,0 +1,289 @@
+@import "fonts"
+
+*
+  box-sizing: border-box
+html, body, main
+  height: 100%
+body
+  font-size: 16px
+  line-height: 1.2
+  margin: 0
+  font-family: "OpenSans", "Arial", sans-serif
+  background: url(../img/start-game-bg.png) no-repeat right 20px bottom
+  background-color: #b1dee8
+
+h3
+  text-align: center
+  font-family: "BuxtonSketch", sans-serif
+  font-size: 32px
+  color: #b54826
+  margin: 0
+  font-weight: 400
+p, ol
+  font-family: "BuxtonSketch", sans-serif
+  font-size: 22px	
+  color: #3c251c
+  margin: auto
+input, button, select
+  font-family: "OpenSans", "Arial", sans-serif
+button
+  cursor: pointer
+  font-size: 20px
+  border: none
+  background: #1bd675
+  color: #fff
+  text-transform: uppercase
+  padding: 10px 30px
+  border-radius: 10px	
+  outline: none
+
+.modal
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+
+.start-game
+  max-width: 1200px
+  margin: 70px auto auto auto
+  .rules
+    .flex-wrapper
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+    .rule-text-left
+      background: url(../img/start-game-rule1.png) no-repeat center top / contain
+      width: 494px
+      height: 154px
+      padding: 15px 50px
+    .rule-text-right
+      background: url(../img/start-game-rule2.png) no-repeat center top / contain
+      width: 457px
+      height: 244px
+      padding: 30px 15px
+      margin-top: 30px
+    img
+      margin-top: -30px
+  .user-settings
+    text-align: center
+    h3
+      margin-top: 20px
+    h3.helper
+      display: inline-block
+      position: relative
+      margin-top: 0
+      &::before
+        content: ''
+        background-image: url(../img/start-game-baggage.png)
+        width: 150px
+        height: 85px
+        display: inline-block
+        position: absolute
+        top: 45px
+        left: -230px
+    input
+      width: 250px
+      display: block
+      margin: 5px auto
+      border: none
+      padding: 5px 10px
+      border-radius: 7px
+      font-size: 16px
+    select
+      border-radius: 5px
+      border: none
+      font-size: 20px
+      margin: 10px 0
+      padding-left: 5px
+      &.cardsBack
+        width: 50px
+      &.gameDifficulty
+        width: 150px
+  .start-button-wrapper
+    text-align: center
+    button
+      background: #0070ce
+      padding: 10px 50px
+      margin-top: 20px
+      &:hover
+        background-color: lighten(#0070ce, 10%)
+
+.cardsBackVariants
+  .wrapper
+    display: inline-block
+    font-size: 0
+    padding: 8px
+    background: #fff
+    border-radius: 10px
+    margin: 0 5px
+    position: relative
+    img
+      width: 120px
+    span
+      font-size: 18px
+      font-weight: 700
+      position: absolute
+      bottom: -10px
+      left: -10px
+      background: red
+      width: 25px
+      height: 25px
+      border-radius: 8px
+      padding: 2px 0 0 1px
+      color: #fff
+    &:nth-child(1) span
+      background: #135e37
+    &:nth-child(2) span
+      background: #ba2424
+    &:nth-child(3) span
+      background: #34a1fd
+
+.game
+  max-width: 1200px
+  margin: auto
+  text-align: center
+  visibility: hidden
+  height: 100%
+  header
+    height: 70px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    time
+      font-size: 26px
+      color: #fff
+    button:hover
+      background-color: lighten(#1bd675, 10%)
+  .cards
+    height: calc(100% - 100px)
+    font-size: 0
+
+.card
+  display: inline-flex
+  height: 25%
+  width: 25%
+  perspective: 1000
+  transition: opacity 1s linear
+  &.hideCard
+    opacity: 0
+  figure
+    position: relative
+    width: 90%
+    height: 90%
+    margin: auto		
+    transition: transform 0.3s linear
+    transform-style: preserve-3d
+    &.selected
+      transform: rotateY(180deg)
+    span
+      height: 100%
+      width: 100%
+      display: inline-block
+      cursor: pointer
+      position: absolute
+      left: 0
+      top: 0
+      border-radius: 5%
+      backface-visibility: hidden
+    .cardBack, .cardFront
+      background-position: center center
+      background-size: cover
+    .cardFront
+      transform: rotateY(180deg)
+
+.end-game
+  visibility: hidden
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  color: #454646
+  .wrapper
+    width: 340px
+    height: 500px
+  h2
+    font-family: "BuxtonSketch", sans-serif
+    font-size: 56px
+    font-weight: 400
+    margin: auto
+  .result-time
+    font-size: 30px
+  h4
+    font-size: 26px
+    margin: 20px auto
+  table
+    width: 100%
+    border-spacing: 0
+    border: 2px solid #fff
+    border-radius: 0 0 10px 10px
+    tr:first-child
+      td
+        border-top: none
+    td
+      border-left: 2px solid #fff
+      border-top: 2px solid #fff
+      &:first-child
+        border-left: none
+      &:nth-last-child(1)
+        width: 100px
+  button
+    margin-top: 20px
+    background: #fff
+    color: #000
+    &:hover
+      background-color: darken(#fff, 10%)
+
+.tabs-container
+  font-size: 0
+  > div
+    display: none
+    font-size: 16px
+  > input
+    display: none
+  label
+    display: inline-block
+    margin: 0 0 -1px
+    padding: 2px 0
+    font-weight: 600
+    text-align: center
+    border: 1px solid transparent
+    width: 33.33%
+    font-size: 16px
+    &:nth-of-type(1)
+      border-radius: 10px 0 0 0
+    &:nth-last-of-type(1)
+      border-radius: 0 10px 0 0
+    &:hover
+      color: #888
+      cursor: pointer
+  input:checked + label
+    color: #555
+    border: 2px solid #fff
+    border-bottom: none
+    cursor: default
+  > input:nth-of-type(1):checked ~ div:nth-of-type(1), > input:nth-of-type(2):checked ~ div:nth-of-type(2),	> input:nth-of-type(3):checked ~ div:nth-of-type(3)
+    display: block
+
+.back-img-1
+  background-image: url(../img/back1.png)
+.back-img-2
+  background-image: url(../img/back2.png)
+.back-img-3
+  background-image: url(../img/back3.png)
+.front-img-1
+  background-image: url(../img/front1.png)
+.front-img-2
+  background-image: url(../img/front2.png)
+.front-img-3
+  background-image: url(../img/front3.png)
+.front-img-4
+  background-image: url(../img/front4.png)
+.front-img-5
+  background-image: url(../img/front5.png)
+.front-img-6
+  background-image: url(../img/front6.png)
+.front-img-7
+  background-image: url(../img/front7.png)
+.front-img-8
+  background-image: url(../img/front8.png)

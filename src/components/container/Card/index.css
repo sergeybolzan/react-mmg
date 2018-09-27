@@ -1,0 +1,67 @@
+.card {
+  display: inline-flex;
+  height: 25%;
+  width: 25%;
+  perspective: 1000;
+  transition: opacity 1s linear; }
+  .card.hideCard {
+    opacity: 0; }
+    .card.hideCard span {
+      cursor: default; }
+  .card figure {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    transition: transform 0.3s linear;
+    transform-style: preserve-3d; }
+    .card figure.selected {
+      transform: rotateY(180deg); }
+    .card figure span {
+      height: 100%;
+      width: 100%;
+      display: inline-block;
+      cursor: pointer;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 5%;
+      backface-visibility: hidden; }
+    .card figure .cardBack, .card figure .cardFront {
+      background-position: center center;
+      background-size: cover; }
+    .card figure .cardFront {
+      transform: rotateY(180deg); }
+
+.back-img-1 {
+  background-image: url(./images/back1.png); }
+
+.back-img-2 {
+  background-image: url(./images/back2.png); }
+
+.back-img-3 {
+  background-image: url(./images/back3.png); }
+
+.front-img-1 {
+  background-image: url(./images/front1.png); }
+
+.front-img-2 {
+  background-image: url(./images/front2.png); }
+
+.front-img-3 {
+  background-image: url(./images/front3.png); }
+
+.front-img-4 {
+  background-image: url(./images/front4.png); }
+
+.front-img-5 {
+  background-image: url(./images/front5.png); }
+
+.front-img-6 {
+  background-image: url(./images/front6.png); }
+
+.front-img-7 {
+  background-image: url(./images/front7.png); }
+
+.front-img-8 {
+  background-image: url(./images/front8.png); }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Match-Match Game</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<main>
+	<div class="start-game modal">
+		<div class="rules">
+			<div class="container">
+				<div class="flex-wrapper">
+					<div class="rule-text-left">
+						<h3>About game:</h3>
+						<p>Match-Match Game is a card game in which the player must find pairs of pictures.<br>When the game begins, all pictures are hidden.</p>
+					</div>
+					<img src="img/start-game-people.png" alt="People">
+					<div class="rule-text-right">
+						<h3>To Play:</h3>
+						<ol>
+							<li>Select two cards to find a pair of pictures.</li>
+							<li>If the cards match, they disappear.</li>
+							<li>If the cards don't match, they flip back.</li>
+							<li>If all pairs are found, the player wins!</li>
+							<li>Have Fun!</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="user-settings">
+			<h3 class="helper">Enter your name:</h3>
+			<input type="text" id="userFirstName" placeholder="First name">
+			<input type="text" id="userLastName" placeholder="Last name">
+			<input type="email" id="userEmail" placeholder="Email">
+			<h3>Cards back:</h3>
+			<select id="cardsBack" class="cardsBack">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</select>
+			<div class="cardsBackVariants">
+				<div class="wrapper">
+					<img src="img/back1.png" alt="Card back 1">
+					<span>1</span>
+				</div>
+				<div class="wrapper">
+					<img src="img/back2.png" alt="Card back 2">
+					<span>2</span>
+				</div>
+				<div class="wrapper">
+					<img src="img/back3.png" alt="Card back 3">
+					<span>3</span>
+				</div>
+			</div>
+			<h3>Game difficulty:</h3>
+			<select id="gameDifficulty" class="gameDifficulty">
+				<option value="6">Easy</option>
+				<option value="12">Medium</option>
+				<option value="16">Hard</option>
+			</select>
+		</div>
+		<div class="start-button-wrapper">
+			<button>Start new game</button>
+		</div>
+	</div>
+
+	<div class="game">
+		<header>
+			<time>00:00:00</time>
+			<button class="refresh-page-button">New game</button>
+		</header>
+		<div class="cards"></div>
+	</div>
+
+	<div class="end-game modal">
+		<div class="wrapper">
+			<h2>Congratulations!</h2>
+			<div class="result-time" id="result-time">Your time is </div>
+			<h4>Top 10:</h4>
+			<div class="tabs-container">
+				<input type="radio" name="same" checked="checked" id="tab6" />
+				<label for="tab6">Easy</label>
+				<input type="radio" name="same" id="tab12" />
+				<label for="tab12">Medium</label>
+				<input type="radio" name="same" id="tab16" />
+				<label for="tab16">Hard</label>
+				<div id="results-content6"></div>
+				<div id="results-content12"></div>
+				<div id="results-content16"></div>
+			</div>
+			<button class="refresh-page-button">New game</button>
+		</div>
+	</div>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

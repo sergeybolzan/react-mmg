@@ -1,0 +1,36 @@
+.card-back-selection select {
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  margin: 10px 0;
+  padding-left: 5px;
+  width: 50px; }
+
+.cardsBackVariants .wrapper {
+  display: inline-block;
+  font-size: 0;
+  padding: 8px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0 5px;
+  position: relative; }
+  .cardsBackVariants .wrapper img {
+    width: 120px; }
+  .cardsBackVariants .wrapper span {
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    background: red;
+    width: 25px;
+    height: 25px;
+    border-radius: 8px;
+    padding: 2px 0 0 1px;
+    color: #fff; }
+  .cardsBackVariants .wrapper:nth-child(1) span {
+    background: #135e37; }
+  .cardsBackVariants .wrapper:nth-child(2) span {
+    background: #ba2424; }
+  .cardsBackVariants .wrapper:nth-child(3) span {
+    background: #34a1fd; }

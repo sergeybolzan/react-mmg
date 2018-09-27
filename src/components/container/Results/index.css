@@ -1,0 +1,40 @@
+.end-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #454646;
+  background: url(./images/end-game-bg.jpg) no-repeat center center/cover;
+  min-height: 100%; }
+  .end-game h2 {
+    font-family: "BuxtonSketch", sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    margin: auto; }
+  .end-game .result-score {
+    font-size: 30px; }
+  .end-game h4 {
+    font-size: 26px;
+    margin: 20px auto; }
+  .end-game .results-table {
+    height: 400px;
+    overflow: auto;
+    border: 2px solid #fff; }
+  .end-game table {
+    width: 100%;
+    border-spacing: 0;
+    border-radius: 0 0 10px 10px; }
+    .end-game table td {
+      border-top: 2px solid #fff; }
+    .end-game table th, .end-game table td {
+      border-left: 2px solid #fff; }
+      .end-game table th:first-child, .end-game table td:first-child {
+        border-left: none; }
+      .end-game table th:nth-last-child(1), .end-game table td:nth-last-child(1) {
+        width: 100px; }
+  .end-game button {
+    margin: 20px auto;
+    background: #fff;
+    color: #000; }
+    .end-game button:hover {
+      background-color: #e6e6e6; }
