@@ -92,7 +92,7 @@ export const getResultsFromAPI = () => {
   return async dispatch => {
     try {
       const response = await axios.get(OPTIONS.API_ENDPOINT);
-      dispatch(getResultsSuccess(response.data.result));
+      dispatch(getResultsSuccess(response.data)); //response.data.result
     } catch (error) {
       dispatch(getResultsFailure(error));
     }

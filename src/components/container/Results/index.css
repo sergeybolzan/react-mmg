@@ -24,8 +24,8 @@
     width: 100%;
     border-spacing: 0;
     border-radius: 0 0 10px 10px; }
-    .end-game table td {
-      border-top: 2px solid #fff; }
+    .end-game table th, .end-game table td {
+      border-bottom: 2px solid #fff; }
     .end-game table th, .end-game table td {
       border-left: 2px solid #fff; }
       .end-game table th:first-child, .end-game table td:first-child {

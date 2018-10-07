@@ -14,5 +14,5 @@ export const UPDATE_SCORE = 'UPDATE_SCORE';
 export const OPTIONS = {
   CHECK_CARDS_DELAY: 400,
   CHECK_WIN_DELAY: 1000,
-  API_ENDPOINT: 'http://mmg-score.herokuapp.com'
+  API_ENDPOINT: 'http://mmg-table.herokuapp.com/api'
 }
