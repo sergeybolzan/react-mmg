@@ -11,8 +11,10 @@ class Score extends Component {
     this.setState({ intervalId: intervalId });
   }
 
-  componentWillUnmount() {
-    clearInterval(this.state.intervalId);
+  componentDidUpdate() {
+    if (this.props.isWinGame) {
+      clearInterval(this.state.intervalId);
+    }
   }
 
   timer = () => {
@@ -39,12 +41,14 @@ Score.propTypes = {
   score: PropTypes.number.isRequired,
   difficultyId: PropTypes.number.isRequired,
   updateScore: PropTypes.func.isRequired,
+  isWinGame: PropTypes.bool.isRequired
 };
 
 export default connect(
   state => ({
     score: state.cards.score,
-    difficultyId: state.userSettings.get('difficultyId')
+    difficultyId: state.userSettings.get('difficultyId'),
+    isWinGame: state.cards.isWinGame
   }),
   { updateScore }
 )(Score);

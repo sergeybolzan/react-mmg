@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import './index.css';
 import Card from '../../container/Card';
 import Score from '../../container/Score';
-import { initCards, sendResultToAPI } from '../../../actions';
+import { initCards, sendResultToAPI, setWinGameToFalse } from '../../../actions';
 
 class Game extends Component {
   handleButtonClick = () => {
@@ -14,9 +14,10 @@ class Game extends Component {
   };
 
   async componentDidUpdate() {
-    const { isWinGame, score, history, sendResultToAPI, firstName, secondName, email } = this.props;
+    const { isWinGame, score, history, sendResultToAPI, firstName, secondName, email, setWinGameToFalse } = this.props;
 
-    if (isWinGame === true) {
+    if (isWinGame) {
+      setWinGameToFalse();
       const username = firstName + ' ' + secondName;
       await sendResultToAPI(username, email, score);
       history.push('results');
@@ -71,5 +72,5 @@ export default connect(
     secondName: state.userSettings.get('secondName'),
     email: state.userSettings.get('email'),
   }),
-  { initCards, sendResultToAPI }
+  { initCards, setWinGameToFalse, sendResultToAPI }
 )(Game);

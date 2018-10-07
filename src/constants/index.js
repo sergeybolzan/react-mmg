@@ -7,6 +7,7 @@ export const INIT_CARDS = 'INIT_CARDS';
 export const FLIP_CARD = 'FLIP_CARD';
 export const CHECK_CARDS = 'CHECK_CARDS';
 export const CHECK_IS_WIN = 'CHECK_IS_WIN';
+export const SET_WINGAME_TO_FALSE = 'SET_WINGAME_TO_FALSE';
 export const GET_RESULTS_SUCCESS = 'GET_RESULTS_SUCCESS';
 export const GET_RESULTS_FAILURE = 'GET_RESULTS_FAILURE';
 export const UPDATE_SCORE = 'UPDATE_SCORE';

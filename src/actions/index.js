@@ -11,6 +11,7 @@ import {
   FLIP_CARD,
   CHECK_CARDS,
   CHECK_IS_WIN,
+  SET_WINGAME_TO_FALSE,
   GET_RESULTS_SUCCESS,
   GET_RESULTS_FAILURE,
   UPDATE_SCORE
@@ -77,6 +78,10 @@ export const checkIsWinWithTimeout = () => {
     }, OPTIONS.CHECK_WIN_DELAY);
   };
 };
+
+export const setWinGameToFalse = () => ({
+  type: SET_WINGAME_TO_FALSE
+})
 
 export const getResultsSuccess = results => ({
   type: GET_RESULTS_SUCCESS,

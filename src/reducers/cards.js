@@ -1,4 +1,4 @@
-import { FLIP_CARD, INIT_CARDS, CHECK_CARDS, CHECK_IS_WIN, UPDATE_SCORE } from '../constants';
+import { FLIP_CARD, INIT_CARDS, CHECK_CARDS, CHECK_IS_WIN, SET_WINGAME_TO_FALSE, UPDATE_SCORE } from '../constants';
 
 let idCounter = 1;
 
@@ -51,6 +51,9 @@ export default function(state = initialState, action) {
         return { ...state, isWinGame: true };
       }
       return state;
+
+    case SET_WINGAME_TO_FALSE:
+      return { ...state, isWinGame: false };
 
     case UPDATE_SCORE:
       return { ...state, score: action.payload };
